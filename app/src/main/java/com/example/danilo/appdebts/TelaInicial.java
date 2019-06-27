@@ -3,9 +3,12 @@ package com.example.danilo.appdebts;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.danilo.appdebts.Classes.Category;
+import com.example.danilo.appdebts.DAO.CategoryDAO;
 import com.example.danilo.appdebts.database.Databasedets;
 import com.example.danilo.appdebts.database.ScriptDLL;
 
@@ -23,6 +26,13 @@ public class TelaInicial extends AppCompatActivity {
         mLayout = findViewById(R.id.layout);
 
         createConnection();
+        CategoryDAO categoryDAO = new CategoryDAO(mConection);
+        Category category = categoryDAO.getCategory(5);
+        category.setType("Energia");
+        categoryDAO.alter(category);
+        categoryDAO.remove(7);
+        categoryDAO.remove(8);
+        categoryDAO.remove(9);
     }
 
 
