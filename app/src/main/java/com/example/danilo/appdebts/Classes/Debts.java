@@ -10,34 +10,56 @@ public class Debts {
     public float mValue;
     public String mPaymentDate;
     public String mPayDate;
+    public String mDescription;
 
-    public Debts(){}
+
+    public Debts() {
+    }
 
 //    public Debts(String value){mValue = value;}
 
     public void setId(long id) {
         mId = id;
     }
-    public long getId(long id) {return mId;}
+
+    public long getId(long id) {
+        return mId;
+    }
 
     public void setCategory(Category category) {
         mCategory = category;
     }
-    public Category getCategory() {return mCategory;}
+
+    public Category getCategory() {
+        return mCategory;
+    }
 
     public void setValue(float value) {
         mValue = value;
     }
-    public float getValue() {return mValue;}
+
+    public float getValue() {
+        return mValue;
+    }
 
     public void setPaymentDate(String paymentDate) {
         mPaymentDate = paymentDate;
     }
-    public String getPaymentDate() {return mPaymentDate;}
+
+    public String getPaymentDate() {
+        return mPaymentDate;
+    }
 
     public void setPayDate(String payDate) {
         mPayDate = payDate;
     }
-    public String getPayDate() {return mPayDate;}
+
+    public String getPayDate() {
+        return mPayDate;
+    }
+
+    public String getDescription() {
+        return mDescription;
+    }
 
 }
