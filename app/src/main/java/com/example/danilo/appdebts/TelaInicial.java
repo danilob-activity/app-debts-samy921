@@ -1,5 +1,6 @@
 package com.example.danilo.appdebts;
 
+import android.annotation.SuppressLint;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.constraint.ConstraintLayout;
@@ -10,14 +11,16 @@ import android.os.Bundle;
 import com.example.danilo.appdebts.Classes.Category;
 import com.example.danilo.appdebts.DAO.CategoryDAO;
 import com.example.danilo.appdebts.database.Databasedets;
-import com.example.danilo.appdebts.database.ScriptDLL;
+
 
 public class TelaInicial extends AppCompatActivity {
 
     private SQLiteDatabase mConection;
     private Databasedets mDataHelper;
     private ConstraintLayout mLayout;
+    private CategoryDAO mCategoryDAO;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,4 +48,8 @@ public class TelaInicial extends AppCompatActivity {
             Snackbar.make(mLayout, e.toString(), Snackbar.LENGTH_LONG).show();
         }
     }
+
+    public void populeDatebase(){
+        //fazer oh
+     }
 }
